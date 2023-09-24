@@ -3,12 +3,13 @@
     font-family: 'Times New Roman', Times, serif;
     font-weight: 400;
     font-size: 18px;
-    padding: 0;
+    /* padding: 0; */
+    /* box-sizing: border-box; */
 }
+
 
 body {
     overflow-x: hidden;
-    /* width: fit-content; */
 }
 
 
@@ -17,8 +18,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    position: fixed;
+    z-index: 30;
 }
 
 .nav img {
@@ -30,19 +31,26 @@ body {
 
 }
 
-.flex {
+
+.flex ul {
     display: flex;
     list-style: none;
 }
 
-.flex li {
+.flex ul li {
     margin: 20px;
     font-size: 20px;
     transition: 0.2s;
 }
 
 
-.flex li a:hover {
+.flex ul li a {
+    text-decoration: none;
+    color: beige;
+}
+
+
+.flex ul li a:hover {
     color: beige;
     background-color: rgb(172, 90, 248);
     padding: 10px;
@@ -50,13 +58,16 @@ body {
     transition: 0.2s;
 }
 
-.flex li a.active {
+
+.flex ul li a.active {
     color: beige;
     background: rgb(172, 90, 248);
     padding: 10px;
     border-radius: 25px;
     transition: 0.2s;
 }
+
+
 
 header div {
     margin: 0 20px;
@@ -104,7 +115,7 @@ header div {
 
 .title {
     font-size: 48px;
-    margin: 20px 0 10px 0;
+    margin: 100px 0 10px 0;
     text-align: start;
 
 }
@@ -135,7 +146,6 @@ header div {
 }
 
 .container {
-    /* max-width: 1500px; */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -144,14 +154,14 @@ header div {
     max-width: 1500px;
     margin: auto;
     padding: 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
     justify-content: space-between;
 }
 
 .footer-left,
 .footer-center,
 .footer-right {
-    /* flex: 1; */
     padding: 15px;
 }
 
@@ -216,41 +226,49 @@ ul li {
 
 
 /* header */
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 768px) {
 
     .nav {
         width: 100vw;
         display: flex;
         align-items: center;
+        justify-content: space-around;
     }
 
     .flex.active {
-        height: 250px;
+        height: 350px;
+        background: rgb(211, 202, 220);
     }
+
 
     .flex {
         position: absolute;
         top: 80px;
-        left: 0;
-        right: 0;
+        /* left: 0; */
+        /* right: 0; */
         width: 100vw;
-        background: rgb(211, 202, 220);
-        transition: 0.2px;
         height: 250px;
+        transition: 0.3s;
+        overflow-x: hidden;
+    }
+
+    .flex ul {
         display: block;
-        text-align: center;
-        padding: 15px 0;
-        transition: 0.3px ease-in-out;
-        opacity: 0;
-    }
-
-    .flex li a {
         width: fit-content;
-        margin: 50px auto 0 auto;
+        margin: 80px 200px 0 auto;
+        text-align: right;
+        transition: 0.5s;
+        opacity: 0;
+        /* color: black; */
     }
 
-    .flex.active {
+    .flex.active ul {
         opacity: 1;
+    }
+
+    .flex ul li a {
+        margin-bottom: 12px;
+        color: black;
     }
 
     .hamburger {
@@ -261,19 +279,61 @@ ul li {
     .hamburger .line {
         width: 30px;
         height: 3px;
-        background-color: black;
+        background-color: white;
         margin: 10px 0 0 400px;
     }
 
     .wavy {
-        top: 60vh;
+        top: 70vh;
+        width: 100vw;
     }
+
+
+
+    /* footer */
+    .footer-content {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-bottom ul {
+        margin-top: 10px;
+    }
+
+    .footer-right {
+        padding: 3px;
+        display: block;
+    }
+
+    .social-links {
+        justify-content: start;
+    }
+
+    .social-links img {
+        margin-right: 3px;
+    }
+
+    /* .bg-img {
+        margin-top: 350px;
+        margin-left: 0;
+    } */
 }
 
-@media only screen and (max-width: 650px) {
-    body {
-        overflow-x: hidden;
-    }
+/* @media only screen and (max-width: 650px) {
+
 
     .nav {
         width: 100vw;
@@ -291,24 +351,29 @@ ul li {
         left: 0;
         right: 0;
         width: 100vw;
-        background: rgb(211, 202, 220);
-        transition: 0.2px;
+        /* background: rgb(211, 202, 220); *
         height: 250px;
+        transition: 0.3s;
+        overflow: hidden;
+    }
+
+    .flex ul {
         display: block;
-        text-align: center;
-        padding: 5px 0;
-        transition: 0.3px ease-in-out;
-        opacity: 0;
-    }
-
-    .flex li a {
         width: fit-content;
-        margin: 30px auto 0 auto;
+        margin: 10px auto 0 auto;
+        text-align: center;
+        padding: 15px 0;
+        transition: 0.5s;
+        opacity: 0;
+        /* background-color: red; 
     }
 
-    .flex.active {
+    .flex.active ul {
         opacity: 1;
+    }
 
+    .flex ul li a {
+        margin-bottom: 12px;
     }
 
     .hamburger {
@@ -326,7 +391,21 @@ ul li {
     .bg-img {
         background-size: cover;
     }
-}
+
+    .footer-content {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+    }
+
+    .footer-bottom ul {
+        margin-top: 10px;
+    }
+} */
 
 /* @media only screen and (max-width: 500px) {
     .nav {
@@ -383,7 +462,7 @@ ul li {
 
 
 /* footer */
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .footer-content {
         flex-direction: column;
         align-items: flex-start;
@@ -419,8 +498,8 @@ ul li {
     .social-links img {
         margin-right: 3px;
     }
-}
-
+} */
+/* 
 @media screen and (min-width: 600px) and (max-width: 768px) {
     .footer-content {
         flex-direction: column;
@@ -438,7 +517,7 @@ ul li {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
-        /* width: 100%; */
+        /* width: 100%; 
     }
 
     .footer-bottom ul {
@@ -457,4 +536,4 @@ ul li {
     .social-links img {
         margin-right: 3px;
     }
-}
+} */

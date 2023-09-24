@@ -12,7 +12,7 @@
 
 <body>
     <!-- Navbar -->
-    <header>
+    <header class="header">
         <nav class="nav">
             <div>
                 <img src="/images/virtual.png" alt="Dazzle Tech">
@@ -22,19 +22,22 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <div>
-                <ul class="flex">
-                    <li><a class="active">Home</a></li>
-                    <li><a>Products</a></li>
-                    <li><a>Reviews</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>About us</a></li>
+            <div class="flex">
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <!-- Main -->
-    <section class="bg-img">
+    <!-- Main start-->
+
+    <!-- banner -->
+    <section class="bg-img" id="home">
         <!-- <img class="bg-img" src="/images/bg.jfif" alt=""> -->
         <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#e6e6e6" fill-opacity="1"
@@ -46,14 +49,32 @@
             <h2 class="subtitle">Your Gateway to the Exciting World of Future Technologies</h2>
             <button class="button">View More</button>
         </div>
-        <!-- <div>
-            <button>View More</button>
-        </div> -->
     </section>
+
+
+    <!-- products -->
+    <section id="products">
+
+    </section>
+
+
+    <!-- reviews -->
+    <section id="reviewes">
+
+    </section>
+
+    <!-- blog -->
+    <section id="blog">
+
+    </section>
+
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-content">
+                <div>
+                    <img src="/images/virtual.png" alt="Dazzle Tech">
+                </div>
                 <div class="footer-left">
                     <h3>Contact Us</h3>
                     <p>Email: dazzletech@example.com</p>
@@ -61,12 +82,23 @@
                     <p>123 Tech Street, Tech City</p>
                 </div>
                 <div class="footer-center">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Help and FAQ</a></li>
+                        <li><a href="#">Shipments</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-center">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-right">
@@ -87,12 +119,16 @@
             </div>
         </div>
     </footer>
+
     <script>
-        hamburger = document.querySelector(".hamburger");
-        hamburger.onclick = function () {
-            navbar = document.querySelector(".flex");
-            navbar.classList.toggle("active");
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            hamburger = document.querySelector(".hamburger");
+            hamburger.onclick = function () {
+                navbar = document.querySelector(".flex");
+                console.log(navbar)
+                navbar.classList.toggle("active");
+            }
+        })
     </script>
     <script src="/script/script.js"></script>
 </body>
