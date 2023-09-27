@@ -8,6 +8,10 @@
     <link rel="icon" type="image/x-icon" href="/images/virtual.png">
     <link rel="stylesheet" href="/styles/style.css">
     <!-- <script src="/script/script.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -47,7 +51,7 @@
         <div class="bg-heading">
             <h1 class="title">Tech Explorers Hub</h1>
             <h2 class="subtitle">Your Gateway to the Exciting World of Future Technologies</h2>
-            <button class="button">View More</button>
+            <button class="button-banner">View More</button>
         </div>
     </section>
 
@@ -157,8 +161,42 @@
 
 
     <!-- reviews -->
-    <section id="reviewes">
-
+    <section class="reviews" id="reviews">
+        <div class="slider-container">
+            <div class="showSlide">
+                <h3>Smartphone (iPhone 13 Pro)</h3>
+                <h1 class="content">The iPhone 13 Pro is a powerhouse. With its stunning Super Retina XDR display,
+                    blazing-fast A15 Bionic chip, and versatile camera system, it's a top-notch choice for tech
+                    enthusiasts. However, the high price tag may deter some buyers.</h1>
+            </div>
+            <div class="showSlide">
+                <h3>Laptop (Dell XPS 13)</h3>
+                <h1 class="content">The Dell XPS 13 is a masterpiece in laptop design. Its borderless InfinityEdge
+                    display is a visual treat, and the performance is exceptional thanks to Intel's latest processors.
+                    It's lightweight, portable, and perfect for both work and play.</h1>
+            </div>
+            <div class="showSlide">
+                <h3>Smartwatch (Apple Watch Series 7)</h3>
+                <h1 class="content">The Apple Watch Series 7 is the best smartwatch you can buy. It offers an always-on
+                    display, faster charging, and impressive health and fitness features. The only drawback is its
+                    compatibility limited to iPhones.</h1>
+            </div>
+            <div class="showSlide">
+                <h3>Gaming Console (PlayStation 5)</h3>
+                <h1 class="content">The PlayStation 5 sets a new standard for gaming consoles. Its lightning-fast SSD
+                    drastically reduces load times, and the DualSense controller adds a new level of immersion.
+                    Exclusive titles like "Demon's Souls" make it a must-have for gamers.</h1>
+            </div>
+            <div class="showSlide">
+                <h3>Wireless Earbuds (AirPods Pro)</h3>
+                <h1 class="content">Apple's AirPods Pro deliver exceptional sound quality and noise cancellation in a
+                    compact package. They're comfortable for long listening sessions and have seamless integration with
+                    Apple devices. However, the price may be steep for some.</h1>
+            </div>
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+            <a class="next" onclick="nextSlide(1)">&#10095;</a>
+        </div>
     </section>
 
     <!-- blog -->
@@ -215,9 +253,10 @@
             or a
             business leader, we're here to empower you with knowledge and insights.</h3>
 
-        <h3 class="about_desc">Feel free to reach out to us with your questions, feedback, or suggestions. We're excited to be your tech
+        <h3 class="about_desc">Feel free to reach out to us with your questions, feedback, or suggestions. We're excited
+            to be your tech
             companion!</h3>
-        
+
     </section>
 
     <!-- Footer -->

@@ -3,8 +3,6 @@
     font-family: 'Times New Roman', Times, serif;
     font-weight: 400;
     font-size: 18px;
-    /* padding: 0; */
-    /* box-sizing: border-box; */
 }
 
 
@@ -128,7 +126,7 @@ header div {
     text-align: start;
 }
 
-.button {
+.button-banner {
     color: white;
     background: rgb(172, 90, 248);
     padding: 20px;
@@ -137,6 +135,7 @@ header div {
     border: none;
     opacity: 1;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 /* products */
@@ -163,6 +162,156 @@ header div {
     width: 500px;
     height: auto;
 }
+
+
+
+
+
+/* reviews, lagle bad dibo */
+/* .slider-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+ 
+}
+
+
+.slider h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.slider p {
+    font-size: 16px;
+}
+
+.slider-btns {
+    margin-top: 20px;
+}
+
+button{
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+} */
+
+
+/* reviews */
+
+
+/* reviews, lagle bad dibo */
+
+.reviews {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.slider-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.showSlide {
+    display: none;
+}
+
+.showSlide h3 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 20px;
+    margin-top: -30px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+.content {
+    color: black;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+
+/* .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+} */
+
+
+
+/* reviews */
+
+
+
+
+
 
 /* about-us */
 .about-us {
@@ -303,6 +452,7 @@ ul li {
     .flex ul li a {
         margin-bottom: 12px;
         color: black;
+        font-weight: 700;
     }
 
     .hamburger {
@@ -326,11 +476,19 @@ ul li {
     /* products */
     .product-info {
         grid-template-columns: repeat(1, auto);
-        margin: 70px auto 50px 100px;
+        margin: 15px 100px 50px 100px;
     }
 
     .product_details {
         margin: 100px;
+    }
+
+
+    .product_img img {
+        width: 400px;
+        height: auto;
+        text-align: center;
+        margin-left: 80px;
     }
 
     /* about-us */
